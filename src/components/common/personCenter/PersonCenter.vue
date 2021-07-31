@@ -1,6 +1,17 @@
 <template>
   <div>
-    <a id="Person-a" href=""><i class="el-icon-s-custom"></i>个人中心</a>
+    <el-dropdown split-button  @click="handleClick">
+  <router-link id="Person-a" to="login" href=""><i class="el-icon-s-custom"></i>个人中心</router-link>
+  <template #dropdown>
+    <el-dropdown-menu>
+      <el-dropdown-item>修改信息</el-dropdown-item>
+      <el-dropdown-item>修改密码</el-dropdown-item>
+      <el-dropdown-item>退出登录</el-dropdown-item>
+    </el-dropdown-menu>
+  </template>
+</el-dropdown>
+    
+    
   </div>
 </template>
 
